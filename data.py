@@ -1,4 +1,4 @@
-URBAN_ROUTES_URL = 'https://cnt-a6b8c2cd-7abe-4823-83f6-b0b9d8cf5646.containerhub.tripleten-services.com'
+URBAN_ROUTES_URL = 'https://cnt-5492ac49-0456-4b8f-8ba8-e1c1a48a0e90.containerhub.tripleten-services.com?lng=pt'
 # Será preenchido depois com o link do servidor
 
 ADDRESS_FROM = 'East 2nd Street, 601'

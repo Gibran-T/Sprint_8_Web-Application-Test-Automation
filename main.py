@@ -1,7 +1,9 @@
 import data
-import helpers
+import helpers  
+import unittest
 
-class TestUrbanRoutes:
+class TestUrbanRoutes(unittest.TestCase):
+
 
     @classmethod
     def setup_class(cls):
@@ -55,3 +57,7 @@ class TestUrbanRoutes:
         # Adicionar em S8
         print("Função criada para verificar modelo de carro")
         pass
+    import unittest
+
+if __name__ == "__main__":
+    unittest.main()

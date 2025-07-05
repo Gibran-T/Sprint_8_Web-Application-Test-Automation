@@ -1,91 +1,103 @@
-# 🧪 Urban Routes Project (Sprint 7 – QA Automation)
+# 🧪 Urban Routes – Sprint 8: Web Application Test Automation
 
-This is an automated testing project developed during **Sprint 7** of the TripleTen QA Engineering Bootcamp.
-
-The goal is to structure and organize test cases using **Python** and **Pytest**, following industry best practices and preparing for future expansion using **Selenium** (Sprint 8).
-
----
-
-## 🚀 Features
-
-- Modular test structure  
-- Automatic setup for test classes and methods  
-- Separated test data file (`data.py`)  
-- Reusable helper functions (`helpers.py`)  
-- Isolated virtual environment  
-- Ready for Selenium integration in Sprint 8  
+## 📌 Short Description  
+Automated test suite for the Urban Routes web application using **Pytest** and **Selenium WebDriver**.  
+Developed during **Sprint 8** of the TripleTen QA Engineer Bootcamp.  
+This project extends the structure created in [Sprint 7](https://github.com/Gibran-T/urban_routes_project) by adding functional UI tests.
 
 ---
 
-## ▶️ How to Run
+## 🗂️ Project Structure
 
-1. **Clone the repository:**
-
-```bash
-git clone https://github.com/Gibran-T/urban_routes_project.git
+```
+urban_routes_project_sprint_8/
+├── main.py              # Contains test class and automated test functions
+├── data.py              # Constants used in tests (addresses, phone, card, etc.)
+├── helpers.py           # Helper functions (e.g., server availability check)
+├── requirements.txt     # List of dependencies
+├── .gitignore           # Ignore venv and IDE folders
+├── README.md            # Project documentation
 ```
 
-2. **Install dependencies (in virtual environment):**
+---
 
+## ⚙️ Setup Instructions
+
+1. **Clone the repository**
 ```bash
+git clone https://github.com/Gibran-T/urban_routes_project_sprint_8.git
+cd urban_routes_project_sprint_8
+```
+
+2. **Create and activate a virtual environment**
+```bash
+python -m venv .venv
+
+# Activate:
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+```
+
+3. **Install dependencies**
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-3. **Run the tests:**
+---
+
+## ▶️ Running the Tests
+
+Make sure to replace `URBAN_ROUTES_URL` in `data.py` with your active server URL.  
+Then run:
 
 ```bash
-pytest
+pytest main.py -v
 ```
+
+ℹ️ Note: Server links expire after 1 hour or 15 minutes of inactivity.  
+Use the helper function `is_url_reachable()` to verify availability before running tests.
 
 ---
 
-## 📚 What I Learned
+## ✅ Test Scenarios
 
-- Practical use of `pytest` with structured and scalable test logic  
-- Test isolation using helper and data modules  
-- Preparing projects for automation with Selenium  
-- Real-world automation architecture in QA projects  
+| Function | Description |
+|----------|-------------|
+| `test_set_route` | Sets pickup and destination addresses |
+| `test_select_plan` | Chooses the ride plan |
+| `test_fill_phone_number` | Inputs phone number and retrieves SMS code |
+| `test_fill_card` | Fills payment information |
+| `test_comment_for_driver` | Adds message to the driver |
+| `test_order_blanket_and_handkerchiefs` | Selects extras |
+| `test_order_2_ice_creams` | Orders 2 ice creams using loop |
+| `test_car_search_model_appears` | Verifies car model appears in final step |
 
 ---
 
-## 📁 Project Structure
+## 📎 Resources & Documentation
 
-```
-urban_routes_project/
-├── data.py               # Test data (e.g., names, inputs)
-├── helpers.py            # Reusable support functions
-├── main.py               # Main file for test triggers
-├── tests/                # Pytest test cases
-├── requirements.txt      # Project dependencies
-└── README.md             # Project documentation
-```
-Update the README with full project documentation in English
+- 📄 [📘 Sprint 8 – Project Instructions](https://docs.google.com/document/d/1e0vI4HggTB_KdaJfi387XzNi-59KHPHW/edit?usp=sharing)  
+- 📊 [📗 Sprint 8 – Test Case Spreadsheet](https://docs.google.com/spreadsheets/d/1fOeHuOKkFWUSN_iipfXhLZn42mJNhS26uZzp6MRwR4Q/edit?usp=sharing)  
+- 🧱 [🏗️ Sprint 7 – Project Foundation (Repo)](https://github.com/Gibran-T/urban_routes_project)
 
-profile_readme = """# 👋 Hi, I'm Thiago Gibran (Gibran-QA)
+---
 
-QA Automation Engineer focused on delivering reliable, scalable test solutions using Python and Pytest.
-Former systems analyst and tech professor with international experience in Canada, Brazil, and the U.S.
+## 👨‍💻 Author
 
-🔧 Tech Stack
-Languages: Python, JavaScript, TypeScript
+**Thiago Gibran Timoteo Nunes**  
+QA Engineer | Selenium | Pytest | Manual & Automated Testing  
+🇨🇦 Canadian Citizen | 🇧🇷 Brazilian Roots  
+🔗 [GitHub](https://github.com/Gibran-T)  
+🔗 [LinkedIn](https://www.linkedin.com/in/thiago-gibran-a01489b5/)
 
-Tools: Pytest, Postman, Selenium, SQL, Git, GitHub, VSCode
+---
 
-Other: ERP systems, Supply Chain, QA strategy, BDD, CI/CD basics
+## 🧠 Quote
 
-🌍 Background
-Over 15 years of experience in logistics, systems, and education
+> _“Testing leads to failure, and failure leads to understanding.”_  
+> — Burt Rutan
 
-Developed real-world apps like Eggspectation Digital Menu for a restaurant in Montréal
-
-Bootcamp graduate at TripleTen — QA Engineering Program
-
-📫 Let's Connect
-LinkedIn: www.linkedin.com/in/thiago-gibran-a01489b5
-
-GitHub Projects
-
-Email: [gibranlog@gmail.com]
-
-“Quality is never an accident; it is always the result of intelligent effort.” – John Ruskin
-"""
+---
